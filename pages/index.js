@@ -1,4 +1,4 @@
-import { Login } from "./views/auth/Login/Login";
+import { Login } from "../views/auth/Login/Login";
 
 
 export default function Home() {
