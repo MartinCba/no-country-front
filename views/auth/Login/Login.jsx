@@ -23,7 +23,7 @@ export const Login = () => {
   const onSubmit = () => {
     const { userName, password } = values;
 
-    fetch(`${API_ENDPOINT}auth/login`, {
+    fetch("endpoint-url", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
