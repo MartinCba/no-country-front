@@ -1,0 +1,16 @@
+.header{
+    background-color: $background-dark;
+    box-shadow: 0 -8px 10px 8px rgba(0,0,0,0.5);
+    display: block;
+    width: 100%;
+    margin: 0 !important;
+    position: relative;
+    position: fixed;
+    top: 0px;
+    min-height: 15vh;
+    color: $font-color-light;
+
+    h1{
+        margin: 0;
+    }
+}
