@@ -4,7 +4,11 @@
 import { Login } from "./views/auth/Login/Login";
 =======
 import { Login } from "../views/auth/Login/Login";
+<<<<<<< HEAD
 >>>>>>> c3ae74ce790fc2128182fc3f3eaba768c1be2479
+=======
+import { Register } from "../views/auth/Register/Register";
+>>>>>>> ba31cc91cb1958cd312e1abc19c7881eb0688140
 
 >>>>>>> eb41084f82ab1ee8908ba7bbb6d469451281a89d
 
@@ -16,7 +20,11 @@ export default function Home() {
 =======
       <h1>HOME NEXT desde rama martin</h1>
       <Login />
+<<<<<<< HEAD
 >>>>>>> eb41084f82ab1ee8908ba7bbb6d469451281a89d
+=======
+      <Register />
+>>>>>>> ba31cc91cb1958cd312e1abc19c7881eb0688140
     </div>
   );
 }
