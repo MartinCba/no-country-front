@@ -89,7 +89,7 @@ export const Register = () => {
           />
         </div>
         <div>
-          <label>Contraseña</label>
+          <label>Repetir contraseña</label>
           <input
             type="password"
             name="password"
