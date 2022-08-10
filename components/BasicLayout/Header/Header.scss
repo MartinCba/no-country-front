@@ -1,4 +1,5 @@
 .header{
+    padding: 1px;
     background-color: $background-dark;
     box-shadow: 0 -8px 10px 8px rgba(0,0,0,0.5);
     display: block;
@@ -10,7 +11,28 @@
     min-height: 15vh;
     color: $font-color-light;
 
-    h1{
-        margin: 0;
+}
+.menu-options{
+    display: flex;
+    justify-content: flex-end;
+    .login {
+        padding: 1.5px;
+        width: 150px;
+        background-color: $background-light;
+        color: $font-color-orange;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+
+        &:hover{
+            background-color: $backgrond-dark-light;
+            border: 1px solid $font-color-orange;
+            color: $font-color-light;
+        }
+        
+        .PermIdentityIcon {
+           color: $font-color-orange;
+        }
     }
 }
+ 
