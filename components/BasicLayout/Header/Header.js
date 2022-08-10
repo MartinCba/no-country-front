@@ -1,10 +1,14 @@
+import { Container } from '@mui/material';
 import React from 'react';
+import TopBar from "./TopBar/TopBar";
 
 export default function Header() {
   return (
     <div className='header'>
-        <h1>Top Bar</h1>
-        <h1>Menu</h1>
+        <TopBar/>
+        <Container maxWidth='lg' >
+            <h1>desde el header</h1>
+        </Container>
 
     </div>
   )

@@ -1,0 +1,24 @@
+.topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding: 10px;
+    img {
+        padding-top: 10px;
+        padding-left: 100px;
+    }    
+}
+.topbar-hashtag{
+    padding-right: 45px;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    color:$font-color-light;
+    letter-spacing: 2px;
+    &:hover{
+        cursor: pointer;
+        color: $font-color-orange;
+    }
+}
+    
