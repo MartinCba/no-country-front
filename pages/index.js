@@ -1,13 +1,24 @@
 import { Login } from "../views/auth/Login/Login";
 import { Register } from "../views/auth/Register/Register";
-
+import BasicLayout from "../components/BasicLayout/BasicLayout";
 
 export default function Home() {
   return (
-    <div className="home">
-      <h1>HOME NEXT desde rama martin</h1>
-      <Login />
-      <Register />
-    </div>
+      <BasicLayout>
+            <div className="home">    
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  <h1>contenido pagina</h1>
+                  
+                  {/* <Login />
+
+                  <Register /> */}
+            </div>
+      </BasicLayout>
+    
   );
 }
