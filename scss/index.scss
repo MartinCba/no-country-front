@@ -5,9 +5,12 @@
 
 //layouts
 @import "../views/auth/Auth.styles.scss";
+
+//basic layouts
 @import "../components/BasicLayout/BasicLayout.scss";
 @import "../components/BasicLayout/Header/Header.scss";
 @import "../components/BasicLayout/Header/TopBar/TopBar.scss";
+@import "../components/BasicLayout/Header/Menu/Menu.scss";
 
 
 
