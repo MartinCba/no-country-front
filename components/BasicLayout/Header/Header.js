@@ -5,9 +5,9 @@ import MenuHome from './Menu/Menu';
 
 export default function Header() {
   return (
-      <div className='header'>
-        <TopBar/>
-        <MenuHome/>   
+    <div className='header'>
+      <TopBar/>
+      <MenuHome/>   
     </div>
   )
 }

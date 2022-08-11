@@ -1,29 +1,45 @@
-import React from 'react';
-import {Container,Menu,Grid,Icon} from "semantic-ui-react";
+import React,{useState} from 'react';
+import {Container,Menu,Grid,GridColumn,Icon} from "semantic-ui-react";
+import BasicModal from "../../../Modal/BasicModal/BasicModal";
+import Auth from '../../../Auth/Auth';
 
 export default function MenuHome() {
+    const [showModal, setshowModal] = useState(false); 
+
+    const onShowModal = ()=> setshowModal(true);
+    const onCloseModal = ()=> setshowModal(false);
   return (
     <div className='menu' >
         <Container>
             <Grid>
-                <Grid.Column className="menu__right" width={6}>
+                <GridColumn className="menu__right" width={6}>
                     <h2>Lugar para mas cosas</h2>
-                </Grid.Column>   
-                <Grid.Column className="menu__left" width={10}>
-                    <MenuOptions/>
-                </Grid.Column>
+                </GridColumn>   
+                <GridColumn className="menu__left" width={10}>
+                    <MenuOptions onShowModal={onShowModal} onCloseModal={onCloseModal}/>
+                </GridColumn>
             </Grid>
         </Container>
+        <BasicModal 
+            show={showModal} 
+            setShow={setshowModal} 
+            title="Inicio de sesión"
+            size="small"
+        >
+            <Auth onCloseModal={onCloseModal} />
+        </BasicModal>
+        
         
     </div>
   )
 }
 
-function MenuOptions(){
+function MenuOptions(props){
+    const {onShowModal,onCloseModal}=props;
     return(
         <Menu>
-            <Menu.Item>
-                <Icon name="user outline"/>
+            <Menu.Item onClick={onShowModal}>
+                <Icon name="user outline" onClick={onCloseModal}/>
                 Mi cuenta
             </Menu.Item>
         </Menu>          

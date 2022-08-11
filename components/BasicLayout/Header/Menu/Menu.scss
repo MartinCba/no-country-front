@@ -36,6 +36,12 @@
                     .icon{
                         color: $font-color-orange;  
                     }         
+                    &:before{
+                        background-color: $background-dark;
+                    } 
+                }
+                &.m-0 i{
+                    margin: 0 !important;
                 }
             }
         }

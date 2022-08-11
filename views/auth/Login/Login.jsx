@@ -53,7 +53,6 @@ export const Login = () => {
     <>
       <div className="auth">
         <form onSubmit={handleSubmit}>
-          <h1>Iniciar sesión</h1>
           <div>
             <label>Nombre de usuario</label>
             <input
