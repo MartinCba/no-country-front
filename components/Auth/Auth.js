@@ -1,10 +1,20 @@
 import React,{useState} from 'react';
 import {Login} from "../../views/auth/Login/Login";
+import {Register} from "../../views/auth/Register/Register";
 export default function Auth(props) {
-    const {onCloseModal} = props;
-    const [ShowLogin, setShowLogin] = useState(false);
+    const {onCloseModal,setTitleModal} = props;
+    const [ShowLogin, setShowLogin] = useState(true);
+
+    const ShowLoginForm = ()=> {
+        setTitleModal("Inicia Sesión");
+        setShowLogin(true)
+    };
+    const showRegisterForm = ()=>{
+        setTitleModal("Formulario de Registro");
+        setShowLogin(false)
+    };
 
   return (
-    ShowLogin ? <Login/> : <h1>Esty en el registro</h1>
+    ShowLogin ? <Login showRegisterForm={showRegisterForm}/> : <Register ShowLoginForm={ShowLoginForm} />
   )
 }

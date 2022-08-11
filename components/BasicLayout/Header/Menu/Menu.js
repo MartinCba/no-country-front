@@ -5,6 +5,7 @@ import Auth from '../../../Auth/Auth';
 
 export default function MenuHome() {
     const [showModal, setshowModal] = useState(false); 
+    const [titleModal, setTitleModal] = useState("Iniciar Sesión");
 
     const onShowModal = ()=> setshowModal(true);
     const onCloseModal = ()=> setshowModal(false);
@@ -23,10 +24,10 @@ export default function MenuHome() {
         <BasicModal 
             show={showModal} 
             setShow={setshowModal} 
-            title="Inicio de sesión"
+            title={titleModal}
             size="small"
         >
-            <Auth onCloseModal={onCloseModal} />
+            <Auth onCloseModal={onCloseModal} setTitleModal={setTitleModal} />
         </BasicModal>
         
         

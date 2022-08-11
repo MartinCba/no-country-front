@@ -3,8 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Switch, FormControlLabel } from "@mui/material";
 
-export const Register = () => {
+export const Register = (props) => {
   const [data, setData] = useState();
+
+  const {ShowLoginForm}=props;
 
   useEffect(() => {
     fetch("endpoint-url")
@@ -69,7 +71,6 @@ export const Register = () => {
   return (
     <div className="auth">
       <form onSubmit={handleSubmit}>
-        <h1>Registro</h1>
         <div>
           <label>Nombre de usuario</label>
           <input
@@ -154,9 +155,9 @@ export const Register = () => {
         <div>
           <button type="submit">Enviar</button>
         </div>
-        <div>
-          <a href="#">Ir a Iniciar sesión</a>
-        </div>
+        <button onClick={ShowLoginForm}>
+            Ir al Login
+        </button>
       </form>
     </div>
   );

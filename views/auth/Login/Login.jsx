@@ -4,7 +4,10 @@ import * as Yup from "yup";
 
 
 
-export const Login = () => {
+export const Login = (props) => {
+
+  const {showRegisterForm}=props;
+
   const initialValues = {
     userName: "",
     password: "",
@@ -74,9 +77,9 @@ export const Login = () => {
           <div>
             <button type="submit">Enviar</button>
           </div>
-          <div>
-            <a href="#">Registrarme</a>
-          </div>
+          <button onClick={showRegisterForm}>
+            Ir al Registro
+          </button>
         </form>
       </div>
     </>
