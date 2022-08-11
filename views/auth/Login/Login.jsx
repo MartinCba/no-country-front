@@ -77,9 +77,6 @@ export const Login = (props) => {
           <div>
             <button type="submit">Enviar</button>
           </div>
-          <button onClick={showRegisterForm}>
-            Ir al Registro
-          </button>
         </form>
       </div>
     </>
