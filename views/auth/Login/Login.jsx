@@ -4,9 +4,9 @@ import * as Yup from "yup";
 
 
 
-export const Login = (props) => {
+export const Login = () => {
 
-  const {showRegisterForm}=props;
+  
 
   const initialValues = {
     userName: "",

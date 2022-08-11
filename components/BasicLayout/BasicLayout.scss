@@ -1,11 +1,39 @@
-.basic-layout{
-    padding: 0 16px;
-    
+.body{
+    display: flex;
+    align-items: center;
 }
 
-.home{
-    background-color: $backgrond-dark-light !important;
-    box-shadow: 0 -15px 10px 15px rgba(0,0,0,0.5);
-    padding: 16px;
+
+.contenidoBasicLayout{
+    margin-top: 0px 20px !important;
+    padding:16px;
     min-height: 100vh;
+    text-align: center;
+    @include tablet{
+        margin-top: 40px;
+    }
+    
+    .home{
+    
+        background-color: $backgrond-dark-light !important;
+        box-shadow: 0 -15px 10px 15px rgba(0,0,0,0.5);
+        padding:16px;
+        min-height: 100vh;
+            @include tablet{
+                @include grid(2,0.5em);
+            }
+            @include desktop{
+                @include grid(4,1em);
+                
+            }
+    }
+    
 }
+.header{
+    display: block;
+    max-height: 20vh;
+    @include tablet{
+        max-height: 200px;
+    }
+}
+

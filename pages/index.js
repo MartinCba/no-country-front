@@ -5,7 +5,8 @@ import BasicLayout from "../components/BasicLayout/BasicLayout";
 export default function Home() {
   return (
       <BasicLayout>
-            <div className="home">    
+            <div className="home">  
+              
                   <h1>contenido pagina</h1>
                   <h1>contenido pagina</h1>
                   <h1>contenido pagina</h1>
@@ -14,9 +15,6 @@ export default function Home() {
                   <h1>contenido pagina</h1>
                   <h1>contenido pagina</h1>
                   
-                  {/* <Login />
-
-                  <Register /> */}
             </div>
       </BasicLayout>
     

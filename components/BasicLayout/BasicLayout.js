@@ -5,12 +5,12 @@ import Header from './Header/Header';
 export default function BasicLayout(props) {
   const {children}=props;
   return (
-    <>
-      <Header />
-      <Container className='basic-layout' maxWidth='lg'>
+    <div className='body'>
+      <Header className='header'/>
+      <Container className='contenidoBasicLayout' maxWidth='lg'>
         {children}
       </Container>   
-    </>
+    </div>
       
   )
 }

@@ -4,10 +4,11 @@ import TopBar from "./TopBar/TopBar";
 import MenuHome from './Menu/Menu';
 
 export default function Header() {
+  
   return (
-    <div className='header'>
+    <header className='header'>
       <TopBar/>
       <MenuHome/>   
-    </div>
+    </header>
   )
 }
