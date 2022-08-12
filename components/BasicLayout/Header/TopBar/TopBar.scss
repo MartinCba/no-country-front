@@ -1,48 +1,68 @@
 .topbar {
     display: flex;
     flex-direction: column;
-    
-    align-items:center;
+    justify-content:center;
     padding: 10px;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
     @include desktop{
         flex-direction: row;
         justify-content: space-between;
         align-items:flex-start;
     }
     img {
-        height: 45px;
-        @include desktop{
-            height: 80px;
-            
+        height: 80px;
+        display: block;
+        margin: 10px auto;
+        @include tablet{       
+            height: 80px;            
             margin-left: 35px;
         }
+        
 
     }
 
 }
+.topbar__menu{
+    margin-top: 15px;
+    @include tablet{
+        margin-top: 0px;
+    }
+}
 .topbar__menu-options{
-    padding: 10px 10px 0px 10px !important;
     display: flex;
+    flex-direction: row;
     justify-content:space-around;
-    align-items:center;
-    
+    margin-top: 7px 10px 0px 0px;
+    @include tablet{
+        padding: 10px 10px 0px 10px !important;
+        min-width: 480px;
+        margin-top: 15px;
+        margin-right: 25px;
+    }
     
     @include desktop{
         min-width: 550px;
-        margin-top: 15px;
-        margin-right: 110px;
+        margin-right: 80px;
     }
-    li{
-        list-style-type:none;
+    
+    div{
+        padding: 0.5px;
         a{
             line-height: 21px;
             text-emphasis: none;
             text-decoration: none;
             font-weight: bold;
-            font-size: 17px;
+            font-size: 20px;
             color:$font-color-light;
             letter-spacing: 0.1em;
             font-family: $typography;
+            @include tablet{
+                font-size: 17px;
+            }
             &:hover{
                 cursor: pointer;
                 color: $font-color-orange;
@@ -56,7 +76,8 @@
 }
 .topbar-hashtag{
     display: none;
-    @include desktop{
+    
+    @include tablet{
         display: block;
         font-weight: bold;
         font-size: 22px;

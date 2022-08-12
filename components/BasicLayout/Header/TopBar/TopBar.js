@@ -18,23 +18,23 @@ export default function TopBar() {
         <Link href="/sinprejuicios">
           <a className="topbar-hashtag">#SINPREJUICIOS</a>
         </Link>
-        <ol className="topbar__menu-options">
-          <li>
+        <nav className="topbar__menu-options">
+          <div>
             <Link href="/sinprejuicios">
               <a>Inicio</a>
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link href="/sinprejuicios">
               <a>Ubicacion</a>
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link href="/sinprejuicios">
               <a>Contacto</a>
             </Link>
-          </li>
-        </ol>
+          </div>
+        </nav>
       </div>
     </Container>
   );

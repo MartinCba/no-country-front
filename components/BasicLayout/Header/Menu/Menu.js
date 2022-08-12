@@ -37,11 +37,9 @@ export default function MenuHome() {
 function MenuOptions(props){
     const {onShowModal,onCloseModal}=props;
     return(
-        <Menu>
-            <Menu.Item onClick={onShowModal}>
-                <Icon name="user outline" onClick={onCloseModal}/>
-                Mi cuenta
-            </Menu.Item>
-        </Menu>          
+        <div onClick={onShowModal}>
+            <Icon name="user outline" onClick={onCloseModal}/>
+            Mi cuenta
+        </div>        
     )
 }
