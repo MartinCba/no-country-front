@@ -1,24 +1,37 @@
 .topbar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:flex-start;
+    flex-direction: column;
+    
+    align-items:center;
     padding: 10px;
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
     img {
-        height: 80px;
-        padding-top: 10px;
-        margin-left: 35px;
+        height: 45px;
+        @include desktop{
+            height: 80px;
+            
+            margin-left: 35px;
+        }
 
-    }    
+    }
+
 }
 .topbar__menu-options{
     padding: 10px 10px 0px 10px !important;
     display: flex;
     justify-content:space-around;
     align-items:center;
-    min-width: 550px;
-    margin-top: 15px;
-    margin-right: 110px;
+    
+    
+    @include desktop{
+        min-width: 550px;
+        margin-top: 15px;
+        margin-right: 110px;
+    }
     li{
         list-style-type:none;
         a{
@@ -42,14 +55,18 @@
 
 }
 .topbar-hashtag{
-    display: block;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-    text-align: right;
-    color:$font-color-light;
-    letter-spacing: 2px;
-    font-family: $typography;
+    display: none;
+    @include desktop{
+        display: block;
+        font-weight: bold;
+        font-size: 22px;
+        text-decoration: none;
+        text-align: right;
+        color:$font-color-light;
+        letter-spacing: 2px;
+        font-family: $typography; 
+        display: block;
+    }
     &:hover{
         cursor: pointer;
         color: $font-color-orange;
