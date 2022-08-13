@@ -5,11 +5,11 @@
 
 
 .contenidoBasicLayout{
-    margin-top: 100px !important;
+    margin-top: 80px !important;
     min-height: 100vh;
     text-align: center;
     @include tablet{
-        margin-top: 40px;
+        margin-top: 55px!important;
     }
     @include desktop{
         margin-top: 0px 20px !important;
