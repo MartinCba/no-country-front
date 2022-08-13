@@ -16,4 +16,5 @@ export default function Home() {
                   
             </div>
       </BasicLayout>
+  )
 }
