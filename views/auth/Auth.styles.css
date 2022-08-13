@@ -38,6 +38,7 @@
 
 .auth > form > div > div {
   color: $color-principal;
+
   font-size: 15px;
 }
 
@@ -48,8 +49,10 @@
 
 .auth input,
 .auth select {
+
   border-radius: $global-radius;
   border: $global-border;
+
 }
 
 .auth a {
@@ -58,8 +61,10 @@
 
 .auth button {
   transition: all 0.3s ease-out;
+
   background-color: $color-principal;
   border-radius: $global-radius;
+
   border: 0;
   color: white;
   padding: 10px !important;
@@ -68,9 +73,11 @@
 }
 
 .auth button:hover {
+
   color: $color-principal;
   border-radius: $global-radius;
   border: 1px solid $color-principal;
+
   background-color: white;
   padding: 10px !important;
   font-size: 16px;
@@ -82,6 +89,7 @@
   border: 1px solid red;
 }
 
+
 @media screen and (min-width: 600px) {
   .auth {
     background-color: $color-secundario;
@@ -91,6 +99,27 @@
     border: $global-border;
     width: 400px;
     border-radius: $global-radius;
+
+.Mui-checked {
+  color: #ff452b !important;
+}
+
+.MuiSwitch-track {
+  background-color: #ff8b7c !important;
+}
+
+.MuiFormControlLabel-label {
+  font-size: 13px !important;
+  font-family: "Nunito", sans-serif !important;
+}
+
+
+
+  .auth > form {
+    border: var(--global-border);
+    width: 400px;
+    border-radius: var(--global-radius);
+
     background-color: white;
   }
 }

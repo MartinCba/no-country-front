@@ -1,3 +1,4 @@
+
 import BasicLayout from "../components/BasicLayout/BasicLayout";
 
 export default function Home() {
@@ -15,6 +16,4 @@ export default function Home() {
                   
             </div>
       </BasicLayout>
-    
-  );
 }
