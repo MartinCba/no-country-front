@@ -5,15 +5,13 @@
 
 
 .contenidoBasicLayout{
-    margin-top: 80px !important;
+    padding-top: 90px;
     min-height: 100vh;
     text-align: center;
     @include tablet{
-        margin-top: 55px!important;
+        padding-top:60px ;
     }
-    @include desktop{
-        margin-top: 0px 20px !important;
-    }
+    
 
     
     .home{
