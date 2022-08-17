@@ -1,5 +1,5 @@
 {
-  "name": "no-country-front",
+  "name": "proyecto-gym",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,5 +26,7 @@
   "devDependencies": {
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4"
-  }
+  },
+  "keywords": [],
+  "description": "proyecto para no-country"
 }
