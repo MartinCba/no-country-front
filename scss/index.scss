@@ -7,6 +7,7 @@
 //layouts
 @import "../views/auth/Auth.styles.scss";
 
+
 //basic layouts
 @import "../components/BasicLayout/BasicLayout.scss";
 @import "../components/BasicLayout/Header/Header.scss";
@@ -19,6 +20,9 @@
 @import "../pages/contacto.scss";
 @import "../pages/ubicacion.scss";
 
+
+//maps
+@import "../api/map.scss";
 
 
 
