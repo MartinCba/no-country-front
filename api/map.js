@@ -11,8 +11,8 @@ function Map() {
     loader.load().then(() => {
       const google = window.google; // ADDED
       map = new google.maps.Map(googlemap.current, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8
+        center: { lat: -34.397, lng: 15.644 },
+        zoom: 5
       });
     });
   });
