@@ -15,7 +15,7 @@ export default function ubicacion() {
                 <h3>Buenos Aires - CABA</h3>
                 <p>Av. Córdoba 5932</p>
               </div>
-              <MapExample />
+          
             </div>
           </section>
           <section className="contenedor__secction">
