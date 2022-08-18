@@ -1,30 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Login } from "./views/auth/Login/Login";
-=======
-import { Login } from "../views/auth/Login/Login";
-<<<<<<< HEAD
->>>>>>> c3ae74ce790fc2128182fc3f3eaba768c1be2479
-=======
-import { Register } from "../views/auth/Register/Register";
->>>>>>> ba31cc91cb1958cd312e1abc19c7881eb0688140
-
->>>>>>> eb41084f82ab1ee8908ba7bbb6d469451281a89d
+import Head from "next/head";
+import BasicLayout from "../components/BasicLayout/BasicLayout";
 
 export default function Home() {
   return (
-    <div className="home">
-<<<<<<< HEAD
-      <h1>Estamos en el home</h1>
-=======
-      <h1>HOME NEXT desde rama martin</h1>
-      <Login />
-<<<<<<< HEAD
->>>>>>> eb41084f82ab1ee8908ba7bbb6d469451281a89d
-=======
-      <Register />
->>>>>>> ba31cc91cb1958cd312e1abc19c7881eb0688140
-    </div>
+    <BasicLayout>
+      <Head>
+        <title>Mundo Cruch | Nuestro Gym</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Gym para todas las edades..." />
+        <meta name="author" content="Nombre del autor" />
+      </Head>
+      <div className="home">
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>contenido pagina</h1>
+        <h1>Agregado de sandbox</h1>
+      </div>
+    </BasicLayout>
   );
 }

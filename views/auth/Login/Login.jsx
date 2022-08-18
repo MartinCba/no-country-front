@@ -5,6 +5,9 @@ import * as Yup from "yup";
 
 
 export const Login = () => {
+
+  
+
   const initialValues = {
     userName: "",
     password: "",
@@ -53,7 +56,6 @@ export const Login = () => {
     <>
       <div className="auth">
         <form onSubmit={handleSubmit}>
-          <h1>Iniciar sesión</h1>
           <div>
             <label>Nombre de usuario</label>
             <input
@@ -74,9 +76,6 @@ export const Login = () => {
           </div>
           <div>
             <button type="submit">Enviar</button>
-          </div>
-          <div>
-            <a href="#">Registrarme</a>
           </div>
         </form>
       </div>

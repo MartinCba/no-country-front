@@ -1,17 +1,19 @@
 .auth {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $backgrond-dark-light !important;
 }
 
 .auth > form {
-  width: 100%;
+
+  width: 100% !important;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
+  background-color:$background-light !important ;
 }
 
 .auth > form > div {
@@ -20,20 +22,24 @@
   justify-content: center;
   flex-direction: column;
   padding: 5px 0;
+  color: $backgrond-dark-light;
 }
 
 .auth > form > div > *:not(label) {
   padding: 8px 0;
+  
 }
 
 .auth > form > div > input,
 .auth > form > div > select {
   padding: 8px !important;
+  color: $backgrond-dark-light;
 }
 
 .auth > form > div > a {
   text-decoration: none;
   color: black;
+
 }
 
 .auth > form > div > div {
