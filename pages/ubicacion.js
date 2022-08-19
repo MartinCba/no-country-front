@@ -18,7 +18,7 @@ export default function ubicacion() {
               </div>
             </div>
           </section>
-          <div>
+          <div className='map'>
             <Map /> 
           </div>
           <section className="contenedor__secction">
