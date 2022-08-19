@@ -26,7 +26,6 @@ function Map() {
         // a este marcador le añadimos un icono personalizado
       const marker2 = new google.maps.Marker({
         position: {lat: -34.585250136738544, lng: -58.44405126383858},
-        icon: "../public/img/LogoPagina.svg",
         draggable: false
       });
       marker1.setMap(map);
