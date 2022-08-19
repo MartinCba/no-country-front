@@ -1,4 +1,7 @@
-#mapa{
-  display: block;
-  height:100%;
+#map{
+    height: 400px;
+    @include tablet{
+        height: 300px;
+        margin: 0px 80px;
+    }
 }
