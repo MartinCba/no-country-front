@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 import BasicLayout from '../components/BasicLayout/BasicLayout';
 import { Icon } from 'semantic-ui-react';
+import Map from '../api/map';
 
 export default function ubicacion() {
   return (
@@ -15,9 +16,11 @@ export default function ubicacion() {
                 <h3>Buenos Aires - CABA</h3>
                 <p>Av. Córdoba 5932</p>
               </div>
-          
             </div>
           </section>
+          <div>
+            <Map /> 
+          </div>
           <section className="contenedor__secction">
             <h2>Horarios </h2>
             <h3>Dias Normales</h3>
