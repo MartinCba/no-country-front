@@ -12,13 +12,25 @@ function Map() {
       const google = window.google; // ADDED
       map = new google.maps.Map(googlemap.current, {
         center: { lat: -34.585250136738544, lng: -58.44405126383858 },
-        zoom: 15,
+        zoom: 16,
         fullscreenControl: false, // remove the top-right button
         mapTypeControl: false, // remove the top-left buttons
         streetViewControl: false, // remove the pegman
         zoomControl: false, // remove the bottom-right buttons
 
       });
+      const marker1 = new google.maps.Marker({
+        position: {lat: -34.585250136738544, lng: -58.44405126383858},
+        draggable: false
+      });
+        // a este marcador le añadimos un icono personalizado
+      const marker2 = new google.maps.Marker({
+        position: {lat: -34.585250136738544, lng: -58.44405126383858},
+        icon: "../public/img/LogoPagina.svg",
+        draggable: false
+      });
+      marker1.setMap(map);
+      marker2.setMap(map);
       
     });
   });
