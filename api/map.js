@@ -11,9 +11,15 @@ function Map() {
     loader.load().then(() => {
       const google = window.google; // ADDED
       map = new google.maps.Map(googlemap.current, {
-        center: { lat: -34.397, lng: 15.644 },
-        zoom: 5
+        center: { lat: -34.585250136738544, lng: -58.44405126383858 },
+        zoom: 15,
+        fullscreenControl: false, // remove the top-right button
+        mapTypeControl: false, // remove the top-left buttons
+        streetViewControl: false, // remove the pegman
+        zoomControl: false, // remove the bottom-right buttons
+
       });
+      
     });
   });
   return <div id="map" ref={googlemap} />;
