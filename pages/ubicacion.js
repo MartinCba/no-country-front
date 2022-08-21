@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from "next/dynamic";
 import BasicLayout from '../components/BasicLayout/BasicLayout';
 import { Icon } from 'semantic-ui-react';
-import Map from '../api/map';
+import Map from '../api/map'; //google map
 
 export default function ubicacion() {
   const MapWithNoSSR = dynamic(() => import("../api/maps"), {
