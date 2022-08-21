@@ -1,9 +1,13 @@
-import React,{Fragment} from 'react';
+import React from 'react';
+import dynamic from "next/dynamic";
 import BasicLayout from '../components/BasicLayout/BasicLayout';
 import { Icon } from 'semantic-ui-react';
 import Map from '../api/map';
 
 export default function ubicacion() {
+  const MapWithNoSSR = dynamic(() => import("../api/maps"), {
+    ssr: false
+  })
   return (
       <BasicLayout>
         <h1 className="title">Ubicación</h1>
@@ -18,8 +22,8 @@ export default function ubicacion() {
               </div>
             </div>
           </section>
-          <div className='map'>
-            <Map /> 
+          <div id="map" className='map'>
+                <MapWithNoSSR />
           </div>
           <section className="contenedor__secction">
             <h2>Horarios </h2>
