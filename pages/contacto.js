@@ -8,7 +8,7 @@ export default function contacto() {
         <h2>CONTACTANOS</h2>
         <div className="contacto__info">
           <p>
-            <img src="/img/phone_black_24dp.svg"/>
+            <img src="/img/icons8-whatsapp.svg"/>
             +54 (11) 5925576
           </p>
           <p>
