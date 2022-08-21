@@ -61,6 +61,22 @@
   justify-content: center;
 
   i {
-    margin-right: 14px;
+    margin-right: 5px;
+  }
+}
+
+.horarios{
+  h3{
+    width: 200px;
+    margin: 12px auto;
+    border-radius: 6px;
+    color: $font-color-orange;
+    background-color: $backgrond-dark-light;
+    p{
+      span{
+        font-weight: bold;
+      }
+    }
+
   }
 }
