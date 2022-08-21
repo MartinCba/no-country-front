@@ -41,9 +41,10 @@
   }
 }
 .map{
-  width: 100%;
+  
   @include desktop {
     order: 3;
+    width: 100%;
   }
   
 }
