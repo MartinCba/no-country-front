@@ -64,19 +64,31 @@
     margin-right: 5px;
   }
 }
-
 .horarios{
-  h3{
+  @include desktop{
+    display: flex;
+    justify-content: space-around;
+  }
+  &:last-of-type h3{
+    margin-top: 20px;
+    @include desktop{
+      margin-top: 0px;
+    }
+  }
+  &__title{
     width: 200px;
     margin: 12px auto;
     border-radius: 6px;
     color: $font-color-orange;
     background-color: $backgrond-dark-light;
-    p{
-      span{
-        font-weight: bold;
-      }
+  }
+  div{
+    div{
+      display: block;
+      width: 100%;
+      text-align: left;
     }
-
+    
   }
 }
+
