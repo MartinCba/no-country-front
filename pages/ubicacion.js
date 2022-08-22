@@ -29,24 +29,27 @@ export default function ubicacion() {
             <h2>Horarios </h2>
             <div className="horarios">
               <div>
-                <h3>Dias Normales</h3>
-                <p>
-                  <span>Lunes a Viernes:</span> 08:00 hs a 21:00 hs.
-                </p>
-                <p>
-                  <span>Sabado:</span> 08:00 hs a 18:00 hs.
-                </p>
+                <h3 className="horarios__title">Dias Laborales</h3>
+                <div>
+                  <p>
+                    <span>Lunes a Viernes:</span> 8:00 a 21:00 hs.
+                  </p>
+                  <p>
+                    <span>Sabado:</span> 8:00 a 18:00 hs.
+                  </p>
+                </div>
               </div>             
-            </div>
-            <div>
-              <h3>Feriados</h3>
+            
               <div>
-                <p>
-                  <span>Lunes a Viernes:</span> 08:00 hs a 13:00 hs.
-                </p>
-                <p>
-                  <span>Sabado:</span> Cerrado
-                </p>
+                <h3 className="horarios__title">Feriados</h3>
+                <div>
+                  <p>
+                    <span>Lunes a Viernes:</span> 8:00 a 13:00 hs
+                  </p>
+                  <p>
+                    <span>Sabado:</span> Cerrado
+                  </p>
+                </div>
               </div>
             </div>
           </section>
