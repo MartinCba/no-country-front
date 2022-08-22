@@ -1,5 +1,5 @@
 .title {
-  margin-top: 20px !important;
+  margin-top: 30px !important;
   margin-bottom: 0;
   padding: 10px;
   color: $font-color-orange;
@@ -61,6 +61,34 @@
   justify-content: center;
 
   i {
-    margin-right: 14px;
+    margin-right: 5px;
   }
 }
+.horarios{
+  @include desktop{
+    display: flex;
+    justify-content: space-around;
+  }
+  &:last-of-type h3{
+    margin-top: 20px;
+    @include desktop{
+      margin-top: 0px;
+    }
+  }
+  &__title{
+    width: 200px;
+    margin: 12px auto;
+    border-radius: 6px;
+    color: $font-color-orange;
+    background-color: $backgrond-dark-light;
+  }
+  div{
+    div{
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    
+  }
+}
+
