@@ -24,10 +24,9 @@ export const Login = () => {
   const onSubmit = async (values) => {
     
     const response = await loginApi(values);
-
-    if (response?.status_code === 200) {
+    console.log(response);
+    if (response?.token) {
       localStorage.setItem("token", response.token);
-      localStorage.setItem("email", response.email);
       console.log("conectado el backen");
     } else {
       console.log("fallo el fetch")
