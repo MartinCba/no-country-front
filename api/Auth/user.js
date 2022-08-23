@@ -4,27 +4,21 @@ import { BASE_PATH } from "../../utils/constants";
 export async function loginApi(values){
     try {
 
-        const url = `${BASE_PATH}/ingreso`;
-        console.log(url);
+        const url = `${BASE_PATH}/login`;
         const params = {
             method:"POST",
             headers:{
-                "Content-Type":"application/x-www-form-urlencoded",
+                "Content-Type":"application/json",
             },
             body:JSON.stringify(values),
         };
         
         const response = await fetch(url,params);
-
         const result = await response.json();
         return result;
 
-        
     } catch (error) {
         console.log(error);
-        
-        console.log('cath del try');      
-
         return null
     }
 }
