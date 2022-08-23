@@ -26,13 +26,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     #map{
-      margin: 25px 7em;
+      margin: 25px 3em;
       
     }
 
-    h3{
-      margin: 5px 0px 5px;
-    }
+    
   }
   h2{
     color: $font-color-orange;
@@ -84,9 +82,10 @@
   }
   div{
     div{
-      display: block;
-      width: 100%;
-      text-align: left;
+      @include desktop{
+        text-align: left;
+      }
+      
     }
     
   }
