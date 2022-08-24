@@ -2,67 +2,52 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-
+import { loginApi } from "../../../api/Auth/user";
 
 export const Login = () => {
 
   
 
   const initialValues = {
-    userName: "",
+    email: "",
     password: "",
   };
 
-  const required = "* Campo obligatorio";
-
   const validationSchema = () =>
     Yup.object().shape({
-      userName: Yup.string()
+      email: Yup.string()
         .min(4, "La cantidad mínima de caracteres es 4")
-        .required(required),
-      password: Yup.string().required(required),
+        .required(true),
+      password: Yup.string().required(true),
     });
 
-  const onSubmit = () => {
-    const { userName, password } = values;
-
-    fetch("endpoint-url", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userName,
-        password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.status_code === 200) {
-          localStorage.setItem("token", data?.result?.token);
-          localStorage.setItem("userName", data?.result?.user.userName);
-        } else {
-          alert("error");
-        }
-      });
+  const onSubmit = async (values) => {
+    
+    const response = await loginApi(values);
+    console.log(response);
+    if (response?.token) {
+      localStorage.setItem("token", response.token);
+      console.log("conectado el backen");
+    } else {
+      console.log("fallo el fetch")
+    }
   };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
 
-  const { handleSubmit, handleChange, values } =
-    formik;
+  const { handleSubmit, handleChange, values } = formik;
 
   return (
     <>
       <div className="auth">
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Nombre de usuario</label>
+            <label>E-mail</label>
             <input
               type="text"
-              name="userName"
+              name="email"
               onChange={handleChange}
-              value={values.userName}
+              value={values.email}
             />
           </div>
           <div>
