@@ -1,65 +1,75 @@
 import React,{useState} from "react";
-import { Button } from "semantic-ui-react";
+import { Button,Form } from "semantic-ui-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
-
 import { loginApi } from "../../../api/Auth/user";
 
-export const Login = () => {
-  // UseState para utilkizar el spinner.
+export const Login = (props) => {
+
+  // funcion que modifica un useState del basicModal para cerra el Modal.
+  const { onCloseModal } = props;
+
+  // UseState para utilizar el spinner.
   const [loading, setLoading] = useState(false);
 
   //constante que almacena el hooks de Formik.
-  const formik = useFormik({ 
-    initialValues:initialValues(),
-    validationSchema:Yup.object(validationSchema()), 
-    onSubmit: onSubmit, 
-  });
-
-
-  async function onSubmit (values){
-    setLoading(true); // iniciador de spinner de carga.
-    const response = await loginApi(values); 
-    setLoading(false); // fin de spinner de carga.
-    console.log(response);
-    if (response?.token) {
-      localStorage.setItem("token", response.token);
-      toast.success("Ingresando...");
-    } else {
-      toast.error("Usuario o contraseña incorrrecto");
+  const formik = useFormik(
+    { 
+      initialValues:initialValues(),
+      validationSchema:Yup.object(validationSchema()), 
+      onSubmit: async (values) => {
+        setLoading(true); // iniciador de spinner de carga.
+        const response = await loginApi(values); 
+        setLoading(false); // fin de spinner de carga.
+        if (response?.token) {
+          localStorage.setItem("token", response.token);
+          toast.success("Ingresando...");
+          onCloseModal(false);
+        } else {
+          toast.error("Usuario o contraseña incorrrecto");
+        }
+      }, 
     }
+  );
+
+  // Se ejecuta solo cuando 
+  async function onSubmit (values){
+    
   };
 
-  //Destructuring funciones de constante que almacena en hooks de Formik. 
-  const { handleSubmit, handleChange, values, errors } = formik;
+  
 
   return (
     <>
       <div className="auth">
-        <form onSubmit={handleSubmit}>
+        <Form className="formContent" onSubmit={formik.handleSubmit}>
           <div>
-            <label>E-mail</label>
-            <input
+            <label htmlFor="email">E-mail</label>
+            <Form.Input
               type="text"
               name="email"
-              onChange={handleChange}
-              error={errors.email}
+              onChange={formik.handleChange}
+              error={formik.errors.email}
             />
           </div>
           <div>
-            <label>Contraseña</label>
-            <input
+            <label htmlFor="password">Contraseña</label>
+            <Form.Input
+              className="form__input"
               type="password"
               name="password"
-              onChange={handleChange}
-              error={errors.password}
+              onChange={formik.handleChange}
+              error={formik.errors.password}
             />
           </div>
           <div>
-            <Button type="submit" loading={loading}>Enviar</Button>
+            <Button type="submit" className="Button-login" onClick={formik.handleSubmit}>
+              Entrar  
+            </Button>  
           </div>
-        </form>
+         
+        </Form>
       </div>
     </>
   );
@@ -78,7 +88,7 @@ function initialValues() {
 // funcion que retorna un objeto con valores validados con Yup para utilizarse como schema de useFormik.
 function validationSchema(){
   return {
-    email: Yup.string().min(4, "La cantidad mínima de caracteres es 4").required(true),
-    password: Yup.string().required(true),
+    email : Yup.string().email("Ingrese un email válido").required("El correo es obligatorios"),
+    password: Yup.string().required("Ambos campos son obligatorios"),
   };
 }

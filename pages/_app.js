@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         autoClose={2500}
         hideProgressBar
         newestOnTop
