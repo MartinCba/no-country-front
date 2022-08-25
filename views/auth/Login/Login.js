@@ -1,17 +1,22 @@
 import React,{useState} from "react";
-import { Button,Form ,Message} from "semantic-ui-react";
+import { Button,Form } from "semantic-ui-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
+import useAuth from "../../../hooks/useAuth";
 import { loginApi } from "../../../api/Auth/user";
+
 
 export const Login = (props) => {
 
   // funcion que modifica un useState del basicModal para cerra el Modal.
-  const { onCloseModal } = props;
+  const { setshowModal } = props;
 
   // UseState para utilizar el spinner.
   const [loading, setLoading] = useState(false);
+
+  const {login} = useAuth();
+
 
   //constante que almacena el hooks de Formik.
   const formik = useFormik(
@@ -23,9 +28,10 @@ export const Login = (props) => {
         const response = await loginApi(values); 
         setLoading(false); // fin de spinner de carga.
         if (response?.token) {
-          localStorage.setItem("token", response.token);
+          //funcion que almacena un objeto del usuario en el contexto general.
+          login(response.token);
           toast.success("Ingresando...");
-          onCloseModal(false);
+          setshowModal(false);
         } else {
           toast.error("Usuario o contraseña incorrrecto");
         }
@@ -84,7 +90,7 @@ function initialValues() {
 // funcion que retorna un objeto con valores validados con Yup para utilizarse como schema de useFormik.
 function validationSchema(){
   return {
-    email : Yup.string().email("Ingrese un email válido").required(true),
+    email : Yup.string().required(true),
     password: Yup.string().required(true),
   };
 }
