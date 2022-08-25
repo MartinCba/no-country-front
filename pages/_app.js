@@ -1,4 +1,4 @@
-import React,{useMemo,useState} from 'react';
+import React,{useMemo,useEffect,useState} from 'react';
 
 import "../scss/global.scss";
 import 'semantic-ui-css/semantic.min.css';
@@ -10,7 +10,7 @@ import jwtDecode from 'jwt-decode';
 import AuthContext from "../context/AuthContext";
 
 //importamos la funcion que almacena token en localStorage.
-import { setToken } from '../api/token';
+import { setToken,getToken } from '../api/token';
 
 
 // packete para mostrar mensajes en consola.
@@ -21,6 +21,20 @@ export default function MyApp({ Component, pageProps }) {
 
   const [auth,setAuth]=useState(undefined);
 
+  useEffect(() => {
+    
+    const token= getToken();
+    if(token){
+      setAuth({
+        token,
+        idUser: jwtDecode(token).id,
+      });
+    }else{
+      setAuth(null);
+    }
+  
+  },[]);
+
   const login=(token)=>{
     //setea el token en el localstorage.
     setToken(token);
@@ -29,7 +43,6 @@ export default function MyApp({ Component, pageProps }) {
       token,
       idUser: jwtDecode(token).id,
     });
-    console.log(auth);
   }
 
 
@@ -39,8 +52,10 @@ export default function MyApp({ Component, pageProps }) {
       login,
       logout: ()=>null,
       setRelaodUser: ()=>null
-    }),[]
+    }),[auth]
   );
+
+  if(auth === undefined) return null;
 
   return (
     <AuthContext.Provider value={authData}>
