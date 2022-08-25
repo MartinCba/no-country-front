@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Button,Form } from "semantic-ui-react";
+import { Button,Form ,Message} from "semantic-ui-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
@@ -33,11 +33,6 @@ export const Login = (props) => {
     }
   );
 
-  // Se ejecuta solo cuando 
-  async function onSubmit (values){
-    
-  };
-
   
 
   return (
@@ -62,6 +57,7 @@ export const Login = (props) => {
               onChange={formik.handleChange}
               error={formik.errors.password}
             />
+            
           </div>
           <div>
             <Button type="submit" className="Button-login" onClick={formik.handleSubmit}>
@@ -88,7 +84,7 @@ function initialValues() {
 // funcion que retorna un objeto con valores validados con Yup para utilizarse como schema de useFormik.
 function validationSchema(){
   return {
-    email : Yup.string().email("Ingrese un email válido").required("El correo es obligatorios"),
-    password: Yup.string().required("Ambos campos son obligatorios"),
+    email : Yup.string().email("Ingrese un email válido").required(true),
+    password: Yup.string().required(true),
   };
 }
