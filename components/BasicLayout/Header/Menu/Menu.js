@@ -5,12 +5,16 @@ import {Login} from "../../../../views/auth/Login/Login";
 import useAuth from "../../../../hooks/useAuth";
 
 export default function MenuHome() {
+  // useState para mostrar el BasicModal.
   const [showModal, setshowModal] = useState(false);
 
+  // Extraemos del context con el hook el objeto que almacena el token.
   const {auth} = useAuth();
   
+  // funciones para cambiar el estado del BasicModal.
   const onShowModal = () => setshowModal(true);
   const onCloseModal = () => setshowModal(false);
+
   return (
     <div className="menu">
       <Container>
@@ -20,9 +24,9 @@ export default function MenuHome() {
           </GridColumn>
           <GridColumn className="menu__left" width={10}>
             {auth ? (
-              <div onClick={onShowModal}>
-              <Icon name="user outline" />
-              {auth.nombre}
+              <div>
+                <Icon name="user outline" />
+                {auth.nombre}
               </div>
             ) : (
               <MenuOptions
@@ -49,9 +53,9 @@ export default function MenuHome() {
 function MenuOptions(props) {
   const { onShowModal } = props;
   return (
-    <div onClick={onShowModal}>
+    <button onClick={onShowModal}>
       <Icon name="user outline" />
       Mi cuenta
-    </div>
+    </button>
   );
 }

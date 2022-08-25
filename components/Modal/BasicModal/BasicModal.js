@@ -12,7 +12,6 @@ export default function BasicModal(props) {
       <Modal.Content>
         {children}
       </Modal.Content>
-      
     </Modal>
   )
 }
