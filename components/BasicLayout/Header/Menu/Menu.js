@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Container, Grid, GridColumn, Icon } from "semantic-ui-react";
 import BasicModal from "../../../Modal/BasicModal/BasicModal";
 import {Login} from "../../../../views/auth/Login/Login";
+import useAuth from "../../../../hooks/useAuth";
 
 export default function MenuHome() {
   const [showModal, setshowModal] = useState(false);
 
+  const {auth} = useAuth();
+  
   const onShowModal = () => setshowModal(true);
   const onCloseModal = () => setshowModal(false);
   return (
@@ -13,12 +16,20 @@ export default function MenuHome() {
       <Container>
         <Grid>
           <GridColumn className="menu__right" width={6}>
-            <h3>Fitness Gym</h3>
+          {auth ? (<h3>{auth.nombre}</h3>) : (<h3>Fitness Gym</h3>)}
           </GridColumn>
           <GridColumn className="menu__left" width={10}>
-            <MenuOptions
+            {auth ? (
+              <div onClick={onShowModal}>
+              <Icon name="user outline" />
+              {auth.nombre}
+              </div>
+            ) : (
+              <MenuOptions
               onShowModal={onShowModal}
             />
+            )}
+            
           </GridColumn>
         </Grid>
       </Container>

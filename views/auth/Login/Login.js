@@ -91,7 +91,7 @@ function initialValues() {
 // funcion que retorna un objeto con valores validados con Yup para utilizarse como schema de useFormik.
 function validationSchema(){
   return {
-    email : Yup.string().required(true),
+    email : Yup.string().email().required(true),
     password: Yup.string().required(true),
   };
 }
