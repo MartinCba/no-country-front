@@ -15,8 +15,9 @@ export const Login = (props) => {
   // UseState para utilizar el spinner.
   const [loading, setLoading] = useState(false);
 
-  const {login} = useAuth();
+  const {login,auth} = useAuth();
 
+  console.log(auth);
 
   //constante que almacena el hooks de Formik.
   const formik = useFormik(
