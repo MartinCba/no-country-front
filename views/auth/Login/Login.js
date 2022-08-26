@@ -42,7 +42,6 @@ export const Login = (props) => {
   })
 
   return (
-
     <div className="auth">
       <Form className="formContent" onSubmit={formik.handleSubmit}>
           <Form.Input name="email" type='text' placeholder='Correo Electronico' onChange={formik.handleChange} error={formik.errors.email}/>
@@ -56,19 +55,3 @@ export const Login = (props) => {
     </div>
   );
 };
-
-
-
-//funcion que retorna un objeto con los initialValues para usarse en useFormik.
-function initialValues() {
-  return {
-    
-  };
-};
-
-// funcion que retorna un objeto con valores validados con Yup para utilizarse como schema de useFormik.
-function validationSchema(){
-  return {
-    
-  };
-}
