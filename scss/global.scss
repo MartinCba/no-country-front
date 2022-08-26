@@ -4,8 +4,11 @@
 
 
 body{
-    margin: 15vh auto 0 !important;
+    margin: 190px auto 0 !important;
     background-color: $background-light;
+    @include tablet{
+        margin: 143px auto 0 !important;
+    }
 }
 a {
     text-decoration: none !important;
