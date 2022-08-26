@@ -9,7 +9,7 @@ export default function MenuHome() {
   const [showModal, setshowModal] = useState(false);
 
   // Extraemos del context con el hook el objeto que almacena el token.
-  const {auth} = useAuth();
+  const {auth,logout} = useAuth();
   
   // funciones para cambiar el estado del BasicModal.
   const onShowModal = () => setshowModal(true);
@@ -24,9 +24,9 @@ export default function MenuHome() {
           </GridColumn>
           <GridColumn className="menu__left" width={10}>
             {auth ? (
-              <Button /* onClick={logout} */ className="m-0">
+              <Button onClick={logout} className="m-0">
                 <Icon  name="power off"  />
-                Salir
+                Cerrar sesión
               </Button>
               
             ) : (
