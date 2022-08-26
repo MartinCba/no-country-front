@@ -28,11 +28,11 @@ export const Login = (props) => {
         password: Yup.string().required(true),
       }
     ),
-    onSubmit: async(formData)=>{ 
+    onSubmit: async (formData)=>{ 
       setLoading(true);
       const response = await loginApi(formData);
-      if(response?.jwt){
-        login(response.jwt); 
+      if(response?.token){
+        login(response.token); 
         onCloseModal();
       }else{
         toast.error("El email o la contraseña son incorrectos");
