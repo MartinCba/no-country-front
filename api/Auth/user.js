@@ -4,7 +4,7 @@ import { BASE_PATH } from "../../utils/constants";
 export async function loginApi(values){
     try {
 
-        const url = `${BASE_PATH}/login`;
+        const url = `${BASE_PATH}/auth/login`;
         const params = {
             method:"POST",
             headers:{
