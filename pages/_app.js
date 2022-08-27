@@ -28,7 +28,6 @@ export default function MyApp({ Component, pageProps }) {
 
   // Obtiene el token y si existe setea el token en nuestro stado global. Tiene implementado su recarga.
   useEffect(() => {
-    
     const token= getToken();
     if(token){
       //setea un contexto general.
