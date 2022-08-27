@@ -9,11 +9,11 @@ export default function contacto() {
         <h2>CONTACTANOS</h2>
         <div className="contacto__info">
           <p>
-            <Image src="/img/icons8-whatsapp.svg" width={200} height={20} />
+            <Image src="/img/icons8-whatsapp.svg" width={20} height={20} />
             +54 (11) 5925576
           </p>
           <p>
-            <Image src="/img/mail_black_24dp.svg" width={200} height={20} />
+            <Image src="/img/mail_black_24dp.svg" width={20} height={20} />
             info@gym.com
           </p>
         </div>
