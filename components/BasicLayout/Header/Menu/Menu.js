@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Container, Grid, GridColumn, Icon,Button } from "semantic-ui-react";
 import BasicModal from "../../../Modal/BasicModal/BasicModal";
 import {Login} from "../../../../views/auth/Login/Login";
 import useAuth from "../../../../hooks/useAuth";
+import { getMeApi } from "../../../../api/Auth/user"; 
 
 export default function MenuHome() {
   // useState para mostrar el BasicModal.
@@ -10,17 +11,34 @@ export default function MenuHome() {
 
   // Extraemos del context con el hook el objeto que almacena el token.
   const {auth,logout} = useAuth();
+
+  // useState que guarda el usuario.
+  const [user, setUser] = useState(null);
   
+
+  useEffect(() => {
+    (async () => {
+      const response = await getMeApi(logout, auth?.idUser);
+      setUser(response);
+    })()
+
+  }, [auth?.idUser]);
+
+
+  
+
   // funciones para cambiar el estado del BasicModal.
   const onShowModal = () => setshowModal(true);
   const onCloseModal = () => setshowModal(false);
+
+  console.log("render");
 
   return (
     <div className="menu">
       <Container>
         <Grid>
           <GridColumn className="menu__right" width={6}>
-          {auth ? (<h3>{auth.nombre}</h3>) : (<h3>Fitness Gym</h3>)}
+          {user ? (<h3>{user.Usuario.nombre} {user.Usuario.apellido}</h3>) : (<h3>Fitness Gym</h3>)}
           </GridColumn>
           <GridColumn className="menu__left" width={10}>
             {auth ? (

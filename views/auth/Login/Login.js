@@ -33,6 +33,7 @@ export const Login = (props) => {
       const response = await loginApi(formData);
       if(response?.token){
         login(response.token); 
+        toast.success("usuario logeado");
         onCloseModal();
       }else{
         toast.error("El email o la contraseña son incorrectos");
