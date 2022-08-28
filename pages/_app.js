@@ -34,7 +34,6 @@ export default function MyApp({ Component, pageProps }) {
       setAuth({
         token,
         idUser: jwtDecode(token).id,
-        nombre: jwtDecode(token).nombre,
       });
     }else{
       setAuth(null);
