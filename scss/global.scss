@@ -20,7 +20,6 @@ picture {
 .footer_container {
   background-color: black;
   color: white;
-  position: fixed;
   bottom: 0;
   clear: both;
   width: 100%;
@@ -36,4 +35,19 @@ picture {
 }
 .footer_container-icons {
     padding-left: 50px;
+}
+.home_info {
+  background-color:  black;
+}
+.home_info h3{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.home_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: black;
+  z-index: 999;
 }

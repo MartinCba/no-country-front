@@ -1,6 +1,7 @@
 import Head from "next/head";
 import BasicLayout from "../components/BasicLayout/BasicLayout";
 import { Footer } from "../components/infoComponents/Footer/Footer";
+import { HomeInfo } from "../components/infoComponents/HomeInfo/HomeInfo";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <meta name="description" content="Gym para todas las edades..." />
           <meta name="author" content="Nombre del autor" />
         </Head>
+        <HomeInfo/>
       </BasicLayout>
       <Footer />
     </>
