@@ -19,12 +19,16 @@ export async function authFetch(url, params, logout){
                 headers:{
                     ...params?.headers,
                     "auth-token":`${token}`,
-                },   
+                },  
             };
-
+            console.log(token);
+            console.log(paramsTemp);
+            console.log(url);
             try {
                 const response = await fetch(url, paramsTemp);
+                
                 const result = await response.json();
+                console.log(result);
                 return result;
             } catch (error) {
                 return null;
