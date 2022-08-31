@@ -15,12 +15,19 @@
 @import "../components/BasicLayout/Header/Menu/Menu.scss";
 @import "../components/Modal/BasicModal/BasicModal.scss";
 @import "../components/menu/MenuAdmin.scss";
+@import "../components/menu/MenuAlumn.scss";
 
 
 //pages
 @import "../pages/contacto.scss";
 @import "../pages/ubicacion.scss";
 @import "../pages/sinprejuicios.scss";
+
+//Pages Admin
+@import "../pages/admin/actividades.scss";
+@import "../pages/admin/profesores.scss";
+@import "../pages/admin/alumnos.scss";
+
 
 
 //maps
