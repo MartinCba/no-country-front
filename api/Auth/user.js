@@ -26,7 +26,6 @@ export async function loginApi(values){
 export async function getMeApi(logout,idUser){
     try {
         const url = `${BASE_PATH}/user/${idUser}`;
-        console.log(idUser);
         const params = { 
             method:"GET",
             headers:{   
