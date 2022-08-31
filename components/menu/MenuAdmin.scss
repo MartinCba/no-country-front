@@ -1,10 +1,26 @@
+
 .menuAdmin{
     display: none !important;
     @include tablet{
         display: block !important;
+        border-radius: 0px !important;
+        div{
+           border-radius: 2px !important; 
+           margin: 3px 5px 0px;
+           background-color: $font-color-orange;
+           a{
+                background-color: $font-color-orange;
+                color: #000;
+                &:hover{
+                    background-color: rgba(241, 65, 65,0.3);
+                }
+           }
+
+        }
     }
 }
 .menuAdmin__responsive{
+    background-color: black;
     @include tablet {
         display: none !important;
     }
