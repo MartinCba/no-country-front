@@ -1,0 +1,41 @@
+.search {
+  text-align: center;
+  padding: 40px 30px;
+  max-width: 100% !important;
+}
+
+.search-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.search-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.search-link {
+  color: #fb6161;
+}
+
+.inputBuscar {
+  width: 50% !important;
+}
+
+table {
+  min-width: 500px;
+}
+
+.containerInput {
+  align-items: end;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+}

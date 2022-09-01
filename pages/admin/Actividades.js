@@ -1,6 +1,7 @@
 import React from 'react'
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
 import useAuth from "../../../../hooks/useAuth";
+import Buscador from '../../components/Buscador/Buscador';
 
 export default function Actividades() {
   const {auth,logout} = useAuth();
@@ -9,7 +10,7 @@ export default function Actividades() {
 
   return (
     <BasicLayout>
-      <h1>Actividades</h1>
+      <Buscador/>
     </BasicLayout>
   )
 }

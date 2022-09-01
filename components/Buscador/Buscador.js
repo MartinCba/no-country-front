@@ -1,4 +1,4 @@
-
+import { BASE_PATH } from "../../utils/constants";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,7 +12,7 @@ function Buscador() {
 
   const peticionGet = async () => {
     await axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get(`${BASE_PATH}/user`)
       .then((response) => {
         setUsuarios(response.data);
         setTablaUsuarios(response.data);
@@ -50,15 +50,15 @@ function Buscador() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="search">
       <div className="containerInput">
         <input
           className="form-control inputBuscar"
           value={busqueda}
-          placeholder="Búsqueda por Nombre o Empresa"
+          placeholder="Buscar..."
           onChange={handleChange}
         />
-        <button className="btn btn-success">
+        <button className="btn btn-danger">
           <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
@@ -69,12 +69,12 @@ function Buscador() {
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Teléfono</th>
-              <th>Nombre de Usuario</th>
+              <th>Apellido</th>
               <th>Correo</th>
-              <th>Sitio Web</th>
-              <th>Ciudad</th>
-              <th>Empresa</th>
+              <th>Dirección</th>
+              <th>Teléfono</th>
+              <th>Actividad</th>
+              <th>UserName</th>
             </tr>
           </thead>
 
@@ -83,13 +83,13 @@ function Buscador() {
               usuarios.map((usuario) => (
                 <tr key={usuario.id}>
                   <td>{usuario.id}</td>
-                  <td>{usuario.name}</td>
-                  <td>{usuario.phone}</td>
-                  <td>{usuario.username}</td>
+                  <td>{usuario.nombre}</td>
+                  <td>{usuario.apellido}</td>
                   <td>{usuario.email}</td>
-                  <td>{usuario.website}</td>
-                  <td>{usuario.address.city}</td>
-                  <td>{usuario.company.name}</td>
+                  <td>{usuario.direccion}</td>
+                  <td>{usuario.telefono}</td>
+                  <td>{usuario.activity}</td>
+                  <td>{usuario.username}</td>
                 </tr>
               ))}
           </tbody>
