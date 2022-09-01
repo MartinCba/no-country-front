@@ -26,11 +26,13 @@
         justify-content: flex-start;
         font-size: 21px;
         padding: 7px;
-        margin-left: 10px 10px;
         >div{
             display: block;
             padding-right: 20px;
             letter-spacing: 2px;
+        }
+        @include tablet{
+            justify-content: center;
         }
         
 

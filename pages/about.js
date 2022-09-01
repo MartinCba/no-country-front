@@ -23,7 +23,7 @@ export default function about() {
   return (
     <BasicLayout>
         <div  className='CuadroActividades'>
-            <h1>Fecha de Ultimo Pago</h1>
+            <h1>Vencimiento de Cuota</h1>
             {user ? 
                 (<div className='FechadePago'>{user.Usuario.fechaDePago} </div>): 
                 (<Loader active inline/>)
@@ -56,6 +56,15 @@ export default function about() {
                 (<Loader active inline/>)
             }
         </div>
+        <div  className='CuadroActividades'>
+            <h1>Activida Favorita</h1>
+            {user ? 
+                (<div className='FechadePago'>{user.Usuario.activity.nombre} </div>): 
+                (<Loader active inline/>)
+            }
+
+        </div>
+        
         
     </BasicLayout>
   )

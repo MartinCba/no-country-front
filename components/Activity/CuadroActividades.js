@@ -19,7 +19,7 @@ export default function CuadroActividades() {
 
   return (
     <div  className='CuadroActividades'>
-        <h1>Actividades Desarrolladas</h1>
+        <h1>Horarios de Actividades</h1>
         <div className='ContenedorActividades' >
             {activity ? 
             activity.map((actividad)=>{
