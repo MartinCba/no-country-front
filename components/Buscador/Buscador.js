@@ -1,4 +1,5 @@
 import { BASE_PATH } from "../../utils/constants";
+import { authFetch } from "../../utils/fetchAuth";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,9 +11,9 @@ function Buscador() {
   const [tablaUsuarios, setTablaUsuarios] = useState([]);
   const [busqueda, setBusqueda] = useState("");
 
-  const peticionGet = async () => {
+  const peticionGet = async (idUser) => {
     await axios
-      .get(`${BASE_PATH}/user`)
+      .get(`${BASE_PATH}/user/${idUser}`)
       .then((response) => {
         setUsuarios(response.data);
         setTablaUsuarios(response.data);
