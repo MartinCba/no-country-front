@@ -31,6 +31,7 @@ export default function Actividades() {
         size="small"
         onCloseModal={onCloseModal}
       >
+        */ Agregar aca el componente del formulario*/
       </BasicModal>
     </BasicLayout>
   )

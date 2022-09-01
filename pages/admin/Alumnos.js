@@ -22,10 +22,11 @@ export default function Alumnos() {
       <BasicModal
         show={showModal}
         setShow={setshowModal}
-        title="Crear Alumno"
+        title="Agregar Alumnos"
         size="small"
         onCloseModal={onCloseModal}
       >
+      */ Agregar aca el componente del formulario*/
       </BasicModal>
     </BasicLayout>
   )
