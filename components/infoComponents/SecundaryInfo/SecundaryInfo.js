@@ -3,8 +3,8 @@ import Image from "next/image";
 export const SecundaryInfo = () => {
   return (
     <>
-      <h1>Ningún juicio es el mejor</h1>
-      <h3>Se fomentan las diferencias. Las peculiaridades son bienvenidas.</h3>
+      <h1 className="title-card">Ningún juicio es el mejor</h1>
+      <h3 className="subtitle-card">Se fomentan las diferencias. Las peculiaridades son bienvenidas.</h3>
       <div className="card-container">
         <div className="card-content">
           <Image src="/img/img1.png" alt="image" width="200" height="150" />

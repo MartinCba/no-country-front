@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
 import { Button,Icon } from "semantic-ui-react";
 import BasicModal from "../../components/Modal/BasicModal/BasicModal";
+import Register2 from "../../views/auth/Register/Register2";
 
 export default function Alumnos() {
   // useState para mostrar el BasicModal.
@@ -26,7 +27,7 @@ export default function Alumnos() {
         size="small"
         onCloseModal={onCloseModal}
       >
-      */ Agregar aca el componente del formulario*/
+        <Register2 onCloseModal={onCloseModal} />
       </BasicModal>
     </BasicLayout>
   )
