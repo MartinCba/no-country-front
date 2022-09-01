@@ -1,8 +1,8 @@
 import React,{useMemo,useEffect,useState} from 'react';
 import { useRouter } from 'next/router';
-
-import "../scss/global.scss";
 import 'semantic-ui-css/semantic.min.css';
+import "../scss/global.scss";
+
 
 // packete para decodificar el jwt.
 import jwtDecode from 'jwt-decode';
@@ -48,7 +48,6 @@ export default function MyApp({ Component, pageProps }) {
     setAuth({
       token,
       idUser: jwtDecode(token).id,
-      nombre: jwtDecode(token).nombre,
     });
   }
   // funcion de logout.
