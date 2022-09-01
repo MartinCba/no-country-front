@@ -10,6 +10,7 @@ export default function Actividades() {
 
   return (
     <BasicLayout>
+      <h2>Buscar Actividades</h2>
       <Buscador/>
     </BasicLayout>
   )
