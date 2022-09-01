@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import Header from './Header/Header';
+import Header from './Header/Header'
+import {Footer} from "../infoComponents/Footer/Footer";
 
 export default function BasicLayout(props) {
   const {children}=props;
@@ -10,7 +11,7 @@ export default function BasicLayout(props) {
       <Container className='contenidoBasicLayout' maxWidth='lg'>
         {children}
       </Container>   
+      <Footer />
     </div>
-      
   )
 }

@@ -21,7 +21,6 @@ export default function Home() {
         <HomeInfo/>
         <SecundaryInfo/>
       </BasicLayout>
-      <Footer />
     </>
   );
 }
