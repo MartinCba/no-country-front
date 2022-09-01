@@ -5,7 +5,6 @@
     bottom: 0;
     clear: both;
     width: 100%;
-    margin-bottom: 35px;
 }
 
 .footer_container h3 {
@@ -15,38 +14,15 @@
 
 .footer_container p {
     padding-left: 50px;
+    &:last-child{
+        padding-bottom: 25px;
+        @include desktop{
+            padding-top: 10px;
+        }
+
+    }
 }
 
 .footer_container-icons {
     padding-left: 50px;
-}
-
-.home_info img {
-    padding-left: 20px;
-}
-
-.home_info h1 {
-    padding-top: 30px;
-
-}
-
-.home_info a {
-    color: $color-principal;
-    transition: all 0.3s ease-out;
-}
-
-.home_info a:hover {
-    color: black;
-}
-
-.home_container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    z-index: 999;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-evenly;
 }
