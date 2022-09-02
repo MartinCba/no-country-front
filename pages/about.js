@@ -50,6 +50,10 @@ export default function about() {
                         <div className='DatosPersonales-title'>Dirección:</div>
                         <div className='DatosPersonales-valor'>{user.Usuario.direccion} </div>
                     </div>
+                    <div className='DatosPersonales'>
+                        <div className='DatosPersonales-title'>Email:</div>
+                        <div className='DatosPersonales-valor'>{user.Usuario.email} </div>
+                    </div>
                 
                     </>    
                 ): 

@@ -5,8 +5,7 @@ import CuadroActividades from '../components/Activity/CuadroActividades';
 export default function actividades() {
   return (
     <BasicLayout>
-        <CuadroActividades />
-        
+        <CuadroActividades />      
     </BasicLayout>
   )
 }

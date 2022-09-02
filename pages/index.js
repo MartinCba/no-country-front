@@ -1,7 +1,6 @@
 import Head from "next/head";
 import BasicLayout from "../components/BasicLayout/BasicLayout";
 import Buscador from "../components/Buscador/Buscador";
-import { Footer } from "../components/infoComponents/Footer/Footer";
 import { HomeInfo } from "../components/infoComponents/HomeInfo/HomeInfo";
 import { SecundaryInfo } from "../components/infoComponents/SecundaryInfo/SecundaryInfo";
 

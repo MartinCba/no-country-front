@@ -1,8 +1,13 @@
-
-
+.body{
+      display: block;
+      margin-top: 230px;
+      max-height: 83vh;
+      @include tablet{
+            margin-top: 0px !important;
+      }
+}
 .contenidoBasicLayout {
-      min-height: 100vh;
-      text-align: center;
+      min-height: 83vh;
       @include tablet {
             padding: 10px;
       }
@@ -17,6 +22,7 @@
             }
       }
 }
+
 .header {
       display: block;
       max-height: 220px;
