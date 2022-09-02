@@ -3,6 +3,11 @@
 @import "./colors.scss";
 @import "./mixins.scss";
 
+//pages
+@import "../pages/contacto.scss";
+@import "../pages/ubicacion.scss";
+@import "../pages/sinprejuicios.scss";
+
 
 //layouts
 @import "../views/auth/Login/Login.scss";
@@ -16,11 +21,6 @@
 @import "../components/Modal/BasicModal/BasicModal.scss";
 @import "../components/menu/MenuAdmin.scss";
 
-
-//pages
-@import "../pages/contacto.scss";
-@import "../pages/ubicacion.scss";
-@import "../pages/sinprejuicios.scss";
 
 //Pages Admin
 @import "../pages/admin/actividades.scss";

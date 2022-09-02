@@ -17,7 +17,6 @@ export const Login = (props) => {
 
   const {login,auth} = useAuth();
 
-  console.log(auth);
 
   //constante que almacena el hooks de Formik.
   const formik = useFormik({
