@@ -12,7 +12,7 @@
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5em;
   justify-content: center;
   flex-direction: column;
   background-color:$background-light !important ;
@@ -55,10 +55,7 @@
       }
     }
     
-  }
-  
-
-  
+  }  
 }
 
 .auth > form > div > a {

@@ -5,8 +5,8 @@ import * as Yup from "yup";
 
 export default function Register2() {
   return (
-    <div>
-        <Form className="formContent formContent-register ">
+    <div className='auth'>
+        <Form className="formContent">
             <Form.Input label="Nombre" name="username" type="text" placeholder="Nombre" required/>
             <Form.Input label="Apellido" name="apellido" type="text" placeholder="Apellidos" required/>
             <Form.Input label="Dirección" name="direccion" type="text" placeholder="Dirección" required/>
