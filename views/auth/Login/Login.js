@@ -12,6 +12,8 @@ export const Login = (props) => {
   // funcion que modifica un useState del basicModal para cerra el Modal.
   const { onCloseModal} = props;
 
+  const {auth,login} = useAuth();
+
   // UseState para utilizar el spinner.
   const [loading, setLoading] = useState(false);
 

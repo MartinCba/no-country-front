@@ -34,8 +34,7 @@ export async function registerApi(values){
         };
         
         const response = await authFetch(url,params,null);
-        const result = await response.json();
-        return result ? result : null;
+        return response ? response : null;
         
     } catch (error) {
         console.log(error);
