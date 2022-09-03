@@ -15,7 +15,7 @@ export default function Alumnos() {
 
   return (
     <BasicLayout>
-      <h2>Buscar Alumnos</h2>
+      <h2 className="title-alum">Buscar Alumnos</h2>
       <Buscador/>
       <Button onClick={onShowModal}>
         <Icon name="plus" />
