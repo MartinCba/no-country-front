@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { getAllActivity } from '../../api/actividades';
 import {Loader } from 'semantic-ui-react';
-import { FormControlUnstyledContext } from '@mui/base';
 
 
 export default function CuadroActividades() {
