@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import { getAllActivity } from '../../api/actividades';
 import {Loader } from 'semantic-ui-react';
+import { FormControlUnstyledContext } from '@mui/base';
 
 
 export default function CuadroActividades() {
@@ -14,7 +15,7 @@ export default function CuadroActividades() {
         })()
         
     },[]);
-
+    console.log(activity);
   return (
     <div  className='CuadroActividades'>
         <h1>Horarios de Actividades</h1>
@@ -23,7 +24,7 @@ export default function CuadroActividades() {
             activity.map((actividad)=>{
 
                 return(
-                    <div className='ContenedorClase'>
+                    <div key={actividad.horarios[0]._id} className='ContenedorClase'>
                         <h1 className='titleclase'>{actividad.nombre}</h1>
                         <div className='ContenedorHora'>
                             <div>

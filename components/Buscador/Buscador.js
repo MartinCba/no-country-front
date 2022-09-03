@@ -1,8 +1,6 @@
 import { BASE_PATH } from "../../utils/constants";
-import { authFetch } from "../../utils/fetchAuth";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
