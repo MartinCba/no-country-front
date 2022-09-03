@@ -2,8 +2,6 @@ import { BASE_PATH } from "../../utils/constants";
 import { Input,Table } from 'semantic-ui-react';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Buscador() {
   const [usuarios, setUsuarios] = useState([]);
