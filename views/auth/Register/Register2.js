@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { registerApi } from '../../../api/Auth/user';
 import { getAllActivity } from "../../../api/actividades";
 import { getMeApi } from '../../../api/Auth/user';
-import UseAuth from '../../../hooks/useAuth';
+import UseAuth from '../../../hooks/UseAuth';
 
 export default function Register2(props) {
   const [loading, setLoading] = useState(false);
