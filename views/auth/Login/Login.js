@@ -3,7 +3,7 @@ import { Button,Form } from "semantic-ui-react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
-import UseAuth from "../../../hooks/UseAuth";
+import UseAuth from "../../../hooks/useAuth";
 import { loginApi } from "../../../api/Auth/user";
 
 

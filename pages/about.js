@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BasicLayout from "../components/BasicLayout/BasicLayout";
-import UseAuth from '../hooks/UseAuth';
+import UseAuth from '../hooks/useAuth';
 import { getMeApi } from "../api/Auth/user";
 import { Loader } from 'semantic-ui-react';
 

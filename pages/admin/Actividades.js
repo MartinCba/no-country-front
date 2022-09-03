@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import UseAuth from "../../hooks/UseAuth";
+import UseAuth from "../../hooks/useAuth";
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
 import Buscador from '../../components/Buscador/Buscador';
 import BasicModal from "../../components/Modal/BasicModal/BasicModal";

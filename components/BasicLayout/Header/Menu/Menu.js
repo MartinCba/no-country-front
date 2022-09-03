@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { Container, Grid, GridColumn, Icon,Button } from "semantic-ui-react";
 import BasicModal from "../../../Modal/BasicModal/BasicModal";
 import {Login} from "../../../../views/auth/Login/Login";
-import UseAuth from "../../../../hooks/UseAuth";
+import UseAuth from "../../../../hooks/useAuth";
 import { getMeApi } from "../../../../api/Auth/user"; 
 import MenuAdmin from "../../../menu/MenuAdmin";
 import MenuAlumn from "../../../menu/MenuAlumn";
