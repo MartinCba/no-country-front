@@ -1,8 +1,10 @@
 import React, { useState,useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
+import Buscador from '../../components/Buscador/Buscador';
 import BasicModal from "../../components/Modal/BasicModal/BasicModal";
 import { Button,Icon } from "semantic-ui-react";
+
 
 export default function Actividades() {
   const {auth,logout} = useAuth();
@@ -14,12 +16,12 @@ export default function Actividades() {
   const onShowModal = () => setshowModal(true);
   const onCloseModal = () => setshowModal(false);
 
-  /* const response = await getMeApi(logout, auth?.idUser); */
-
   return (
     <BasicLayout>
-      <br></br>
-      <br></br>
+
+      <h2>Buscar Actividades</h2>
+      <Buscador/>
+
       <Button onClick={onShowModal}>
         <Icon name="plus" />
         Agregar Actividad

@@ -5,7 +5,7 @@ export const HomeInfo = () => {
     <div className="home_info">
       <h1>La energía es para todos</h1>
       <h3>Cree en el poder de una comunidad de fitness grupal motivadora.</h3>
-      <h5><a href="#">CONSULTA NUESTRAS CLASES DE FITNESS EN GRUPO</a></h5>
+      <h5><a href="#">CONSULTA NUESTRAS CLASES DE FITNESS EN GRUPO.</a></h5>
       <div className="home_container">
       <Image
         src="/img/gym1.jpg"

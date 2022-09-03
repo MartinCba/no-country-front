@@ -1,5 +1,6 @@
 import { BASE_PATH } from "../../utils/constants";
-import {authFetch} from "../../utils/fetchAuth";
+import { authFetch } from "../../utils/fetchAuth";
+
 
 export async function loginApi(values){
     try {
@@ -57,4 +58,3 @@ export async function getMeApi(logout,idUser){
         return null;
     }
 }
-

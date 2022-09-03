@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
+import Buscador from '../../components/Buscador/Buscador';
 import BasicModal from "../../components/Modal/BasicModal/BasicModal";
 import { Button,Icon } from "semantic-ui-react";
 
@@ -13,8 +14,8 @@ export default function Profesores() {
 
   return (
     <BasicLayout>
-      <br></br>
-      <br></br>
+      <h2>Buscar Profesores</h2>
+      <Buscador/>
       <Button onClick={onShowModal}>
         <Icon name="plus" />
         Agregar Profesor
