@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import useAuth from "../../hooks/useAuth";
+import UseAuth from "../../hooks/UseAuth";
 import BasicLayout from "../../components/BasicLayout/BasicLayout";
 import Buscador from '../../components/Buscador/Buscador';
 import BasicModal from "../../components/Modal/BasicModal/BasicModal";
@@ -7,7 +7,7 @@ import { Button,Icon } from "semantic-ui-react";
 
 
 export default function Actividades() {
-  const {auth,logout} = useAuth();
+  const {auth,logout} = UseAuth();
 
   // useState para mostrar el BasicModal.
   const [showModal, setshowModal] = useState(false);

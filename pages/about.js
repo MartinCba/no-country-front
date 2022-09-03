@@ -1,12 +1,12 @@
-import React,{useState,useEffect} from 'react';
+import { useEffect, useState } from "react";
 import BasicLayout from "../components/BasicLayout/BasicLayout";
-import useAuth from "../hooks/useAuth";
+import UseAuth from '../hooks/UseAuth';
 import { getMeApi } from "../api/Auth/user";
 import { Loader } from 'semantic-ui-react';
 
-export default function about() {
+export default function About() {
       // Extraemos del context con el hook el objeto que almacena el token.
-  const {auth,logout} = useAuth();
+  const {auth,logout} = UseAuth();
 
   // useState que guarda el usuario.
   const [user, setUser] = useState(null);
@@ -18,8 +18,8 @@ export default function about() {
       setUser(response);
     })()
 
-  }, [auth?.idUser]);
-  console.log(user)
+  }, [auth?.idUser,logout]);
+
   return (
     <BasicLayout>
         <div  className='CuadroActividades'>

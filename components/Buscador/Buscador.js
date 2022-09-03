@@ -1,5 +1,5 @@
 import { BASE_PATH } from "../../utils/constants";
-import { Input,Table } from 'semantic-ui-react';
+import { Input,Table,Icon } from 'semantic-ui-react';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -67,17 +67,17 @@ export default function Buscador() {
           </Table.Header>
 
           <Table.Body>
-          {usuarios &&
-              usuarios.map((usuario) => (
-            <Table.Row>
+            <Table.Row >
               <Table.Cell>usuarios.name</Table.Cell>
               <Table.Cell>Approved</Table.Cell>
               <Table.Cell>Approved</Table.Cell>
               <Table.Cell>Approved</Table.Cell>
-              <Table.Cell>Approved</Table.Cell>
-              <Table.Cell>Approved</Table.Cell>
+              <Table.Cell><Icon name='edit outline'/></Table.Cell>
+              <Table.Cell>
+                <Icon size='big' color='red' name='dont' />
+                <Icon color='black' name='user' />
+              </Table.Cell>
             </Table.Row>
-            ))}
           </Table.Body>
           
         </Table>

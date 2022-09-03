@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { registerApi } from '../../../api/Auth/user';
 import { getAllActivity } from "../../../api/actividades";
 import { getMeApi } from '../../../api/Auth/user';
-import useAuth from '../../../hooks/useAuth';
+import UseAuth from '../../../hooks/UseAuth';
 
 export default function Register2(props) {
   const [loading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ export default function Register2(props) {
   // useState que guarda el usuario.
   const [user, setUser] = useState(null);
 
-  const {auth,logout} = useAuth();
+  const {auth,logout} = UseAuth();
 
   useEffect(() => {
     (async () => {

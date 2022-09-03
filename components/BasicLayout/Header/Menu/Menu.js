@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { Container, Grid, GridColumn, Icon,Button } from "semantic-ui-react";
 import BasicModal from "../../../Modal/BasicModal/BasicModal";
 import {Login} from "../../../../views/auth/Login/Login";
-import useAuth from "../../../../hooks/useAuth";
+import UseAuth from "../../../../hooks/UseAuth";
 import { getMeApi } from "../../../../api/Auth/user"; 
 import MenuAdmin from "../../../menu/MenuAdmin";
 import MenuAlumn from "../../../menu/MenuAlumn";
@@ -12,7 +12,7 @@ export default function MenuHome() {
   const [showModal, setshowModal] = useState(false);
 
   // Extraemos del context con el hook el objeto que almacena el token.
-  const {auth,logout} = useAuth();
+  const {auth,logout} = UseAuth();
 
   // useState que guarda el usuario.
   const [user, setUser] = useState(null);
