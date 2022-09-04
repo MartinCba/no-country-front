@@ -15,7 +15,7 @@ export default function Profesores() {
   return (
     <BasicLayout>
       <h2>Buscar Profesores</h2>
-      <Buscador/>
+      <Buscador rolBuscar={"subadmin"}/>
       <Button onClick={onShowModal}>
         <Icon name="plus" />
         Agregar Profesor

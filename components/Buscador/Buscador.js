@@ -26,9 +26,9 @@ export default function Buscador(props) {
   const filtrar =(busqueda,rolBuscar)=>{
     let resultadoBusqueda= tablaUsuarios.filter( (elemento) =>{
       if(elemento.rol.toString()===rolBuscar.toString()){
-        if( elemento.nombre.toString().includes(busqueda)  || elemento.apellido.toString().includes(busqueda) || elemento.email.toString().includes(busqueda) )
-        console.log(elemento)
-        return elemento;
+        if( elemento.nombre.toString().includes(busqueda)  || elemento.apellido.toString().includes(busqueda) || elemento.email.toString().includes(busqueda))
+        {return elemento;}
+        
       }
     });
     setUsuarios(resultadoBusqueda);
