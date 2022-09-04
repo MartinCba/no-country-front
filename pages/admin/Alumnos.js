@@ -20,7 +20,7 @@ export default function Alumnos() {
         Agregar Alumno
       </Button>  
       <h2 className="title-alum">Buscar Alumnos</h2>
-      <Buscador/>
+      <Buscador rolBuscar={"alumno"}/>
       
       
       <BasicModal

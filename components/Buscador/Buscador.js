@@ -2,13 +2,15 @@ import { Input,Table,Icon } from 'semantic-ui-react';
 import { useEffect, useState } from "react";
 import {getAllApi} from "../../api/Auth/user";
 
-export default function Buscador() {
+export default function Buscador(props) {
   //State de datos de forma dinamica
   const [usuarios, setUsuarios] = useState([]);
   //State de datos de forma statica
   const [tablaUsuarios, setTablaUsuarios] = useState([]);
   //state de lo que escribimos en input.
   const [busqueda, setBusqueda] = useState("");
+
+  const {rolBuscar}=props;
 
   const peticionGet = async ()=> {
     const response = await getAllApi();
@@ -17,14 +19,15 @@ export default function Buscador() {
   //Funcion que gusarda en busqueda lo del buscador y ejecuta la funcion para filtrar.
   const handleChange = (e) => {
     setBusqueda(e.target.value);
-    filtrar(e.target.value);
+    filtrar(e.target.value,rolBuscar);
   };
   
   //funcion de filtrado.
-  const filtrar =(busqueda)=>{
+  const filtrar =(busqueda,rolBuscar)=>{
     let resultadoBusqueda= tablaUsuarios.filter( (elemento) =>{
-      if(elemento.rol==="alumno" ){
+      if(elemento.rol.toString()===rolBuscar.toString()){
         if( elemento.nombre.toString().includes(busqueda)  || elemento.apellido.toString().includes(busqueda) || elemento.email.toString().includes(busqueda) )
+        console.log(elemento)
         return elemento;
       }
     });
