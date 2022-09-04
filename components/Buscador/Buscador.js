@@ -1,52 +1,46 @@
-import { BASE_PATH } from "../../utils/constants";
 import { Input,Table,Icon } from 'semantic-ui-react';
 import { useEffect, useState } from "react";
-import axios from "axios";
+import {getAllApi} from "../../api/Auth/user";
 
 export default function Buscador() {
+  //State de datos de forma dinamica
   const [usuarios, setUsuarios] = useState([]);
+  //State de datos de forma statica
   const [tablaUsuarios, setTablaUsuarios] = useState([]);
+  //state de lo que escribimos en input.
   const [busqueda, setBusqueda] = useState("");
 
-  const peticionGet = async () => {
-    await axios
-      .get(`${BASE_PATH}/users`)
-      .then((response) => {
-        setUsuarios(response.data);
-        setTablaUsuarios(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
+  const peticionGet = async ()=> {
+    const response = await getAllApi();
+    return response;
+  }
+  //Funcion que gusarda en busqueda lo del buscador y ejecuta la funcion para filtrar.
   const handleChange = (e) => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
   };
-
-  const filtrar = (terminoBusqueda) => {
-    var resultadosBusqueda = tablaUsuarios.filter((elemento) => {
-      if (
-        elemento.name
-          .toString()
-          .toLowerCase()
-          .includes(terminoBusqueda.toLowerCase()) ||
-        elemento.company.name
-          .toString()
-          .toLowerCase()
-          .includes(terminoBusqueda.toLowerCase())
-      ) {
+  
+  //funcion de filtrado.
+  const filtrar =(busqueda)=>{
+    let resultadoBusqueda= tablaUsuarios.filter( (elemento) =>{
+      if(elemento.rol==="alumno" ){
+        if( elemento.nombre.toString().includes(busqueda)  || elemento.apellido.toString().includes(busqueda) || elemento.email.toString().includes(busqueda) )
         return elemento;
       }
     });
-    setUsuarios(resultadosBusqueda);
-  };
+    setUsuarios(resultadoBusqueda);
+  }
 
   useEffect(() => {
-    peticionGet();
+    (async ()=>{
+      const response = await peticionGet();
+      setUsuarios(response);
+      setTablaUsuarios(response);
+    })()
   }, []);
 
+  
+  
   return (
     <div className="search">
       <div className="containerInput">
@@ -67,45 +61,24 @@ export default function Buscador() {
           </Table.Header>
 
           <Table.Body>
-            <Table.Row >
-              <Table.Cell>usuarios.name</Table.Cell>
-              <Table.Cell>Approved</Table.Cell>
-              <Table.Cell>Approved</Table.Cell>
-              <Table.Cell>Approved</Table.Cell>
+          {busqueda &&
+              usuarios.map((usuario) => (
+            <Table.Row key={usuario._id} >
+              <Table.Cell>{usuario.nombre}</Table.Cell>
+              <Table.Cell>{usuario.apellido}</Table.Cell>
+              <Table.Cell>{usuario.email}</Table.Cell>
+              <Table.Cell>{usuario.telefono}</Table.Cell>
               <Table.Cell><Icon name='edit outline'/></Table.Cell>
               <Table.Cell>
                 <Icon size='big' color='red' name='dont' />
                 <Icon color='black' name='user' />
               </Table.Cell>
             </Table.Row>
+          ))}
           </Table.Body>
           
         </Table>
-        {/* <table className="tableBuscador">
-          <thead className="tableBuscador-header">
-            <tr className="tableBuscador-tr">
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Correo</th>
-              <th>Teléfono</th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {usuarios &&
-              usuarios.map((usuario) => (
-                <tr key={usuario.id}>
-                  <td>{usuario.nombre}</td>
-                  <td>{usuario.apellido}</td>
-                  <td>{usuario.email}</td>
-                  <td>{usuario.telefono}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table> */}
       </div>
     </div>
   );
 }
-

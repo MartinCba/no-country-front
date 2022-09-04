@@ -15,12 +15,14 @@ export default function Alumnos() {
 
   return (
     <BasicLayout>
-      <h2 className="title-alum">Buscar Alumnos</h2>
-      <Buscador/>
-      <Button onClick={onShowModal}>
+      <Button className="BotonRegister" onClick={onShowModal}>
         <Icon name="plus" />
         Agregar Alumno
       </Button>  
+      <h2 className="title-alum">Buscar Alumnos</h2>
+      <Buscador/>
+      
+      
       <BasicModal
         show={showModal}
         setShow={setshowModal}
