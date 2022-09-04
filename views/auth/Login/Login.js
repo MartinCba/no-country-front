@@ -3,7 +3,7 @@ import { Button,Form } from "semantic-ui-react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
-import useAuth from "../../../hooks/useAuth";
+import UseAuth from "../../../hooks/useAuth";
 import { loginApi } from "../../../api/Auth/user";
 
 
@@ -12,12 +12,11 @@ export const Login = (props) => {
   // funcion que modifica un useState del basicModal para cerra el Modal.
   const { onCloseModal} = props;
 
+  const {auth,login} = UseAuth();
+
   // UseState para utilizar el spinner.
   const [loading, setLoading] = useState(false);
 
-  const {login,auth} = useAuth();
-
-  console.log(auth);
 
   //constante que almacena el hooks de Formik.
   const formik = useFormik({

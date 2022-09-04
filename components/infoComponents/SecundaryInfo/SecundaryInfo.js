@@ -3,8 +3,8 @@ import Image from "next/image";
 export const SecundaryInfo = () => {
   return (
     <>
-      <h1>Ningún juicio es el mejor</h1>
-      <h3>Se fomentan las diferencias. Las peculiaridades son bienvenidas.</h3>
+      <h1 className="title-card">Ningún juicio es el mejor</h1>
+      <h3 className="subtitle-card">Se fomentan las diferencias. Las peculiaridades son bienvenidas.</h3>
       <div className="card-container">
         <div className="card-content">
           <Image src="/img/img1.png" alt="image" width="200" height="150" />
@@ -15,22 +15,16 @@ export const SecundaryInfo = () => {
           </p>
         </div>
         <div className="card-content">
-          <Image src="/img/img2.png" alt="image" width="200" height="150" />
+          <Image src="/img/img2.png" alt="image"  width="200" height="150" />
           <h3>INCLUSIÓN</h3>
-          <p>
-            Aquí mantenemos la mente abierta.
-            <br /> No hay un solo tipo o manera en nuestra diversa comunidad.
-            <br /> ¡Ven tal como eres!
+          <p>Aquí mantenemos la mente abierta. No hay un solo tipo o manera en nuestra diversa comunidad.¡Ven tal como eres!
           </p>
         </div>
         <div className="card-content">
           <Image src="/img/img3.png" alt="image" width="200" height="150" />
           <h3>DIVERSIÓN</h3>
           <p>
-            Sabemos que el acondicionamiento físico serio
-            <br /> es difícil, pero eso no significa que no pueda ser <br />
-            una fiesta que lo mantenga al borde de su asiento,
-            <br /> que no tenga suficiente, que espere <br />
+            Sabemos que el acondicionamiento físico serio es difícil, pero eso no significa que no pueda ser una fiesta que lo mantenga al borde de su asiento, que no tenga suficiente, que espere
             con ansias sus entrenamientos.
           </p>
         </div>

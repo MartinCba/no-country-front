@@ -7,7 +7,7 @@ export default function MenuAlumn() {
       <Link href="/actividades" >
         <a className='MenuUser'>Clases</a>
       </Link>
-      <Link href="/about" >
+      <Link href="/About" >
         <a className='MenuUser'>Mis Datos</a>
       </Link>
     </div>

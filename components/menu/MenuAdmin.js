@@ -6,7 +6,6 @@ import Link from 'next/link';
 export default function MenuAdmin(props) {
     
     const {user}= props;
-    console.log(user);
     const router = useRouter();
     return (
         <Menu className='menuEspecial'>

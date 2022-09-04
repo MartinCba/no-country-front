@@ -1,0 +1,13 @@
+.BotonRegister{
+    
+
+    @include tablet{
+        margin-top: 35px !important;
+        margin-left: 30px !important; 
+    }
+}
+
+.title-alum{
+    text-align: center;
+    margin: 10px auto;
+}

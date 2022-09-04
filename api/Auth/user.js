@@ -1,5 +1,6 @@
 import { BASE_PATH } from "../../utils/constants";
-import {authFetch} from "../../utils/fetchAuth";
+import { authFetch } from "../../utils/fetchAuth";
+
 
 
 export async function loginApi(values){
@@ -23,6 +24,26 @@ export async function loginApi(values){
     }
 }
 
+export async function registerApi(values){
+    try {
+        const url = `${BASE_PATH}/register`;
+        const params = {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body:JSON.stringify(values),
+        };
+        
+        const response = await authFetch(url,params,null);
+        return response ? response : null;
+        
+    } catch (error) {
+        console.log(error);
+        return null
+    }
+}
+
 export async function getMeApi(logout,idUser){
     try {
         const url = `${BASE_PATH}/user/${idUser}`;
@@ -38,4 +59,18 @@ export async function getMeApi(logout,idUser){
         return null;
     }
 }
-
+export async function getAllApi(){
+    try {
+        const url= `${BASE_PATH}/users`;
+        const params = { 
+            method:"GET",
+            headers:{   
+                "Content-Type":"application/json",                 
+            },
+        }
+        const result = await authFetch(url,params,null);
+        return result;
+    } catch (error) {
+        return null;
+    }
+}

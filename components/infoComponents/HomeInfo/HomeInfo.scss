@@ -1,0 +1,27 @@
+.home_info{
+    text-align: center;
+}
+.home_info img {
+    padding-left: 20px;
+}
+
+.home_info h1 {
+    padding-top: 30px;
+
+}
+
+.home_info a {
+    color: $color-principal;
+    transition: all 0.3s ease-out;
+}
+
+.home_info a:hover {
+    color: black;
+}
+
+.home_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    z-index: 999;
+}

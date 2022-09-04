@@ -1,0 +1,22 @@
+.card-container {
+    height: max-content;
+    &:last-child{
+        margin-bottom: 20px;
+    }
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+.card-content{
+    padding: 10px;
+    text-align: center;
+    flex-basis: 33%;
+}
+.title-card{
+    text-align: center;
+}
+.subtitle-card{
+    text-align: center;
+}

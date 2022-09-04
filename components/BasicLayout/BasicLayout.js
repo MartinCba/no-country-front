@@ -10,8 +10,8 @@ export default function BasicLayout(props) {
       <Header className='header'/>
       <Container className='contenidoBasicLayout' maxWidth='lg'>
         {children}
-      </Container>   
-      <Footer />
+      </Container>
+      <Footer />   
     </div>
   )
 }

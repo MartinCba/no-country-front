@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export const Footer = () => {
+  const agno = new Date().getFullYear();
   return (
     <div className="footer_container">
       <h3>Crunch Fitness</h3>
@@ -34,7 +35,7 @@ export const Footer = () => {
         height="30"
       />
       </div>
-      <p>Todos los derechos reservados a Crunch Fitness ©2020-2021</p>
+      <p>Todos los derechos reservados a Crunch Fitness ©2020-{agno}</p>
     </div>
   );
 };

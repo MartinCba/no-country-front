@@ -3,6 +3,11 @@
 @import "./colors.scss";
 @import "./mixins.scss";
 
+//pages
+@import "../pages/contacto.scss";
+@import "../pages/ubicacion.scss";
+@import "../pages/sinprejuicios.scss";
+
 
 //layouts
 @import "../views/auth/Login/Login.scss";
@@ -17,11 +22,6 @@
 @import "../components/menu/MenuAdmin.scss";
 
 
-//pages
-@import "../pages/contacto.scss";
-@import "../pages/ubicacion.scss";
-@import "../pages/sinprejuicios.scss";
-
 //Pages Admin
 @import "../pages/admin/actividades.scss";
 @import "../pages/admin/profesores.scss";
@@ -29,7 +29,10 @@
 
 //componentes utilidades
 @import "../components/infoComponents/Footer/Footer.scss";
+@import "../components/infoComponents/HomeInfo/HomeInfo.scss";
+@import "../components/infoComponents/SecundaryInfo/SecundaryInfo.scss";
 @import "../components/Activity/CuadroActividades.scss";
+@import "../components/Buscador/Buscador.scss";
 
 
 //maps

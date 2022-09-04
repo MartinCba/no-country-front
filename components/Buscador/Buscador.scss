@@ -1,0 +1,47 @@
+.search {
+  text-align: center;
+
+  max-width: 100% !important;
+  @include tablet{
+    padding: 20px 30px;
+  }
+}
+
+.search-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  color: #ffffff;
+}
+.tabletBuscador{
+  &-header{
+    width: 300px;
+    >tr{
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+.btnBuscar{
+  height: 30px;
+}
+
+.inputBuscar {
+  width: 50% !important;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.ContainerTable{
+  display: block;
+  max-width: 100%;
+}
+
+.containerInput {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
